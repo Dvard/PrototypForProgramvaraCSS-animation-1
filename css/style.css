@@ -1,0 +1,137 @@
+#animate-btn {
+    transition: ease 0.3s;
+}
+
+#animate-btn:hover {
+    background-color: red;
+}
+
+#circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: green;
+    animation-name: circleAnim1;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes circleAnim1 {
+    0% {margin-left: 0;}
+    25% {background-color: orange;}
+    50% {margin-left: 100%; background-color: pink;}
+    100% {margin-left: 0; background-color: lightblue}
+}
+
+#sky {
+    height: 500px;
+    width: 100%;
+    background-color: lightblue;
+    padding: 30px;
+}
+#cloud {
+    height: 40px;
+    width: auto;
+    animation-name: cloudMove;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+}
+
+@keyframes cloudMove {
+    0% {margin-left: 0;}
+    50% {margin-left: 100%;}
+    100% {margin-left: 0;}
+}
+
+#loadingBarBg {
+    background-color: #eee;
+    height: 100px;
+    width: 400px;
+    padding-left: 10px;
+    padding-top: 50px;
+    padding-right: 10px;
+    margin-top: 20px;
+}
+
+#loadingBar {
+    float: left;
+    width: 0;
+    background-color: green;
+    height: 5px;
+    animation-name: loading;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+#loadingBarToGo {
+    float: left;
+    width: 100%;
+    background-color: #333;
+    height: 5px;
+    animation-name: loadingToGo;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+}
+
+@keyframes loading{
+    0% {width: 0;}
+    100% {width: 100%;}
+}
+
+@keyframes loadingToGo{
+    0% {width: 100%;}
+    100% {width: 0;}
+}
+
+#barChart {
+    background-color: #eee;
+    height: 300px;
+    width: 300px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#bar1, #bar2, #bar3 {
+    width: 30px;
+    float: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    animation: ease 5s;
+}
+
+#bar1 {
+    background-color: red;
+    animation-name: bar1;
+    animation-duration: 0.5s;
+    height: 10px;
+}
+
+#bar2 {
+    background-color: blue;
+    animation-name: bar2;
+    animation-duration: 1s;
+    height: 50px;
+    animation-delay: 0.5s;
+}
+
+#bar3 {
+    background-color: yellow;
+    animation: bar3;
+    animation-duration: 1.5s;
+    height: 100px;
+    animation-delay: 0.5s;
+}
+
+@keyframes bar1 {
+    0% {height: 0;}
+    100% {height: 10px;}
+}
+
+@keyframes bar2 {
+    0% {height: 0;}
+    100% {height: 50px}
+}
+
+@keyframes bar3 {
+    0% {height: 0;}
+    100% {height: 100px}
+}
